@@ -1,0 +1,339 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #2c7a7b;
+    --secondary: #3da9a9;
+    --background: #edf3f8;
+    --card: #ffffff;
+    --text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ======================
+   Navigation
+====================== */
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 35px;
+
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(15px);
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.2);
+
+    z-index: 1000;
+    transition: .3s;
+}
+
+nav.scrolled {
+    background: rgba(20,20,20,.85);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+nav h2 {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #FFD166;
+}
+
+/* ======================
+   Hero
+====================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+
+    padding: 160px 20px 80px;
+
+    background: linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+/* ======================
+   Buttons
+====================== */
+
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: white;
+    color: var(--primary);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.button:hover {
+    transform: translateY(-4px);
+}
+
+/* ======================
+   Sections
+====================== */
+
+section {
+    max-width: 1100px;
+    margin: 60px auto;
+    background: var(--card);
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+section h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* ======================
+   About
+====================== */
+
+.about {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about div {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* ======================
+   Projects
+====================== */
+
+.project-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    width: 280px;
+    padding: 25px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ======================
+   Study Tracker
+====================== */
+
+#study {
+    text-align: center;
+}
+
+.study-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.study-app input {
+    width: 350px;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+}
+
+.study-app input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.study-app .button {
+    margin-top: 0;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 550px;
+    margin: 12px auto;
+
+    padding: 16px 20px;
+
+    background: rgba(44,122,123,.1);
+
+    border-radius: 12px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .6;
+}
+
+.delete-task {
+    background: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-task:hover {
+    background: #d93f3f;
+}
+
+/* ======================
+   Scroll Animation
+====================== */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all .8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======================
+   Dark Mode
+====================== */
+
+.dark-mode {
+    background: #1d1d1d;
+    color: white;
+}
+
+.dark-mode section {
+    background: #2b2b2b;
+    color: white;
+}
+
+.dark-mode h2 {
+    color: #66d9ff;
+}
+
+/* ======================
+   Responsive
+====================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        text-align: center;
+        padding-top: 220px;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    section {
+        margin: 30px 15px;
+        padding: 30px;
+    }
+
+    .study-app input {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
