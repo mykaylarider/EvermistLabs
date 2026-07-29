@@ -24,6 +24,19 @@ I use this repository to document hands-on practice, experiments, course exercis
 - Learn GitHub Actions and automation
 - Create practical projects for my professional portfolio
 - Prepare for entry-level remote IT and technical-support roles
+## Live Projects
+
+### Developer Portfolio
+
+A responsive portfolio website showcasing my skills, projects, and learning journey.
+
+[View Developer Portfolio](https://mykaylarider.github.io/EvermistLabs/projects/developer-portfolio/)
+
+### Study Planner
+
+An interactive browser-based planner created with HTML, CSS, and JavaScript.
+
+[Open Study Planner](https://mykaylarider.github.io/EvermistLabs/projects/study-planner/)
 
 ## Repository Status
 
